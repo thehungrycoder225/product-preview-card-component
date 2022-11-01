@@ -28,13 +28,21 @@ body {
   line-height: 1.5;
 }
 
-img {
+picture {
+  width: 100%;
+  display: block;
+}
+
+image {
   border-radius: 1rem 0 0 1rem;
-  width: 50%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
 }
 
 .container {
-  max-width: 55rem;
+  max-width: 100%;
 }
 
 .card {
@@ -42,11 +50,12 @@ img {
   background-color: hsl(0, 0%, 100%);
   display: flex;
   align-content: space-between;
-  width: 100%;
+  max-width: 70rem;
 }
 
 .card__content {
   padding: 3rem 3rem;
+  margin-top: 10rem;
 }
 
 .card__product--name {
@@ -110,17 +119,17 @@ img {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 790px) {
-  img {
-    border-radius: 1rem 1rem 0 0;
-  }
-  .container {
-    max-width: 30rem;
-  }
+@media (max-width: 799px) {
   .card {
-    display: block;
+    flex-direction: column;
   }
 
   .card__content {
+    padding: 3rem 3rem;
+    margin-top: 0;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 }

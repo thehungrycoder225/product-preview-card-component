@@ -21,7 +21,11 @@
   <main>
     <div class="container">
       <div class="card">
-        <img src="images/image-product-desktop.jpg" alt="Chanel Perfume Image">
+        <picture>
+          <source media="(max-width:70em )" srcset="images/image-product-mobile.jpg">
+          <img src="images/image-product-desktop.jpg" alt="Chanel Perfume Image">
+        </picture>
+
         <div class="card__content flow-content">
           <h2 class="card__product--name">Perfume</h2>
           <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
